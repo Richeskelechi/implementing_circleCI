@@ -36,3 +36,10 @@ in your package.json add the
 
 tenth
 Run yarn test in your terminal.
+
+###### Now Lets work on the circle CI
+first 
+In the root directory create a folder called .circleci 
+
+second 
+In the .circleci folder create a file called  config.yml
