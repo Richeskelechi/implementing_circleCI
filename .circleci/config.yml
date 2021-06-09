@@ -15,6 +15,7 @@ jobs:
       - run: echo "hello world" # run the `echo` command
       - run: echo "Riches A Kul Boy"
       - run: yarn
+      - run: yarn test
 
   ender:
     docker:
