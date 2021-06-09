@@ -21,7 +21,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -35,3 +35,14 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: whoami
+      - name: Run a multi-line script
+        uses: action/setup-node@v2
+        with:
+          node-version: 14
+      - name: install dependencies
+        run: |
+          rm-rf node_modules/
+          yarn install --frozen-lockfile
+          
+      - name: Run the test
+        run: yarn test
